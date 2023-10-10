@@ -1,0 +1,20 @@
+.btn {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 30px;
+    background: #015953;
+    color: #FFFFFF;
+    font-weight: bold;
+    transition: 0.5s;
+    &:hover {
+        cursor: pointer;
+        background: #013430;
+    }
+    &.outline {
+        background: $background-color;
+        border: 1px solid $primary-color;
+        &:hover {
+            background: #002e2a;
+        }
+    }
+}
