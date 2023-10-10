@@ -2,4 +2,29 @@
     border-radius: 10px;
     border: 1px solid #009187;
     background: rgba(0, 133, 124, 0.11);
+    padding: 10px 30px;
+    color: #FFFFFF;
+    &_header {
+        @include flex(space-between, center);
+    }
+    &_body, &_footer {
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+    }
+    &_footer {
+        @include flex(flex-end, center);
+    }
+    &--open {
+        .accordian_icon {
+            transform: rotate(180deg);
+        }
+        .accordian_body, .accordian_footer {
+            opacity: 1;
+            max-height: 200px;
+        }
+        .accordian_footer {
+            padding-bottom: 30px;
+        }
+    }
 }
