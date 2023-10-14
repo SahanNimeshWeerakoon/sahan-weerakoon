@@ -1,8 +1,8 @@
 .accordian {
-    border-radius: 10px;
-    border: 1px solid #009187;
+    border-radius: 0.625rem;
+    border: 0.063rem solid #009187;
     background: rgba(0, 133, 124, 0.11);
-    padding: 10px 30px;
+    padding: 0.625rem 1.875rem;
     color: $font-color;
     &_header {
         @include flex(space-between, center);
@@ -21,10 +21,10 @@
         }
         .accordian_body, .accordian_footer {
             opacity: 1;
-            max-height: 200px;
+            max-height: 12.5rem;
         }
         .accordian_footer {
-            padding-bottom: 30px;
+            padding-bottom: 1.875rem;
         }
     }
 }

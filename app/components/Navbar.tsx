@@ -8,7 +8,7 @@ const NavBar = ({ toggleContactModal }: { toggleContactModal: any }) => {
             </div>
             <div className="navbar_links">
                 <ul>
-                    <li><a href="#" onClick={toggleContactModal}>CONTACT MES</a></li>
+                    <li><a href="#" onClick={toggleContactModal}>CONTACT ME</a></li>
                     <li><a href="#about">ABOUT ME</a></li>
                     <li><Button btnTxt="PROJECTS" url="#projects" /></li>
                 </ul>
