@@ -1,24 +1,10 @@
 // common
-@import "./styles/mixins.scss";
 @import "./styles/variables.scss";
+@import "./styles/commonClasses.scss";
+@import "./styles/mixins.scss";
 
 // Components
 @import "./styles/accordian.scss";
 @import "./styles/button.scss";
-
-body {
-  background: $background-color;
-}
-.cursor-pointer {
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.transition {
-  transition: 0.5s;
-}
-
-.ml-1 {
-  margin-left: 18px;
-}
+@import "./styles/socialMediaList.scss";
+@import "./styles/navbar.scss";

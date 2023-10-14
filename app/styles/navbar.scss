@@ -1,0 +1,16 @@
+.navbar {
+    width: 100%;
+    padding: 10px;
+    background: rgba(217, 217, 217, 0.14);
+    @include flex(space-between, center, row, wrap, flex !important);
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    &_links {
+        @include flex(space-around, center);
+        a {
+            color: $font-color;
+        }
+    }
+}

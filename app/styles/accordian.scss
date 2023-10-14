@@ -3,7 +3,7 @@
     border: 1px solid #009187;
     background: rgba(0, 133, 124, 0.11);
     padding: 10px 30px;
-    color: #FFFFFF;
+    color: $font-color;
     &_header {
         @include flex(space-between, center);
     }

@@ -1,0 +1,14 @@
+.SocialMediaList {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 20px 15px 0 15px;
+    background: $primary-color;
+    position: fixed;
+    left: 0;
+    top: 100px;
+    .SocialMediaIcon {
+        display: block;
+        margin-bottom: 20px;
+    }
+}
