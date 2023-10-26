@@ -3,6 +3,7 @@ import { useState } from "react";
 import NavBar from "./components/Navbar";
 import Banner from "./components/Banner";
 import SocialMediaList from "./components/SocialMediaList";
+import Projects from "./components/Projects";
 
 export default function Home() {
   const [ socialMediaList ] = useState([
@@ -17,6 +18,7 @@ export default function Home() {
       <NavBar toggleContactModal={() => {setModalStatus(status => !status)}} />
       <Banner />
       <SocialMediaList list={socialMediaList} />
+      <Projects />
     </main>
   )
 }

@@ -1,4 +1,5 @@
 import MovingIcon from "./MovingIcon";
+import Title from "./miniComponents/Title";
 
 const Banner = () => {
     const movingIconsList = [
@@ -8,7 +9,7 @@ const Banner = () => {
         <div className="banner">
             <h1 className="banner_title">
                 <img src="/img/titleIcon.png" alt="Sahan Weerakoon" title="Sahan Weerakoon" />
-                HEY I’M SAHAN WEERAKOON
+                <Title title="HEY I’M SAHAN WEERAKOON" />
             </h1>
             <p className="banner_desc">
                 A Frontend Main Full-Stack Engineer With More Than Five Years of experience. Let Me
