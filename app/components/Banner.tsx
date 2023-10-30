@@ -1,4 +1,4 @@
-import MovingIcon from "./MovingIcon";
+import MovingIcon from "./miniComponents/MovingIcon";
 import Title from "./miniComponents/Title";
 
 const Banner = () => {
@@ -15,7 +15,7 @@ const Banner = () => {
                 A Frontend Main Full-Stack Engineer With More Than Five Years of experience. Let Me
                 Know What’s On Your Mind & The Time You Need It. I’ll Handle The Rest. Please Make It Challenging.
             </p>
-            <MovingIcon source="" iconName="" width={10} height={10} />
+            <MovingIcon source="/img/movingIcons/react.png" iconName="react" width={30} height={30} />
         </div>
     );    
 }

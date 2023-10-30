@@ -1,16 +1,19 @@
+import Accordian from "./miniComponents/Accordian";
+import ProjectsListI from "../interfaces/ProjectsListI";
 import ProjectI from "../interfaces/ProjectI";
-import Accordian from "./Accordian";
 
-const ProjectsList = ({ projectsList }: { projectsList: [ProjectI] }) => {
+const ProjectsList = ({ projectsList, onProjectClick }: { projectsList: ProjectsListI, onProjectClick: (newType: ProjectI) => void }) => {
     return (
         <div className="projectsList">
-            {projectsList.map(prj => {
+            {projectsList.items.map(prj => {
                 return (
-                    <div className="projectsList_project">
-                        <Accordian />
+                    <div className="projectsList_project" key={prj.id}>
+                        <Accordian project={prj} onProjectClick={onProjectClick} />
                     </div>
                 )
             })}
         </div>
     );
 }
+
+export default ProjectsList

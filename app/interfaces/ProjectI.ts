@@ -4,7 +4,8 @@ interface ProjectI {
     description: string,
     thumbnail: string,
     detailsLink: string,
-    visitLink: string
+    visitLink: string,
+    isOpen: boolean
 }
 
 export default ProjectI

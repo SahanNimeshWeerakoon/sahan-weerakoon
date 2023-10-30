@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from "./miniComponents/Button";
 
 const NavBar = ({ toggleContactModal }: { toggleContactModal: any }) => {
     return (

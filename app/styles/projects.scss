@@ -1,3 +1,36 @@
 .projects {
-    margin-top: 6.25rem;
+    margin: 6.25rem 0;
+    &_carousel {
+        margin-top: 3rem;
+        @include flex(space-around, flex-start);
+    }
+    &_thumb {
+        width: 45%;
+    }
+    &_list {
+        width: 50%;
+    }
+}
+
+.projectThumb {
+    position: relative;
+    z-index: 1;
+    &_overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.2);
+        border-radius: 0.625rem;
+    }
+    &_img {
+        width: 100%;
+    }
+}
+
+.projectsList {
+    &_project {
+        margin-bottom: 1rem;
+    }
 }
