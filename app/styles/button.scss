@@ -5,6 +5,7 @@
     background: $primary-color;
     color: $font-color;
     font-weight: bold;
+    display: inline-block;
     &:hover {
         background: $hover-color;
     }

@@ -42,7 +42,7 @@
             margin-top: 1.875rem;
         }
     }
-    input, textarea {
+    input[type=text], textarea {
         background: rgba(0, 145, 135, 0.1);
         color: $font-color;
         border: none;
@@ -50,7 +50,7 @@
         width: 100%;
         padding: 0.625rem;
     }
-    button {
+    input[type=submit] {
         float: right;
         margin-right: 8%;
         margin-top: 1.25rem;

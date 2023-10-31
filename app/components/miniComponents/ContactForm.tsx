@@ -1,34 +1,35 @@
-import { useState } from "react";
-import Button from "./Button";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+// import Button from "./Button";
 
-const ContactForm = ({ handleSubmit }: { handleSubmit: (newType: any) => void }) => {
-    const [ contactData, setContactData ] = useState({ name: "", contact: "", message: "" });
+const ContactForm = ({ onClose } : { onClose: any }) => {
+    const form: any = useRef(null);
 
-    const handleInput = (e: any) => {
-        setContactData(dt => {
-            return {
-                ...dt,
-                [e.target.name]: e.target.value
-            }
-        });
-    }
+  const sendEmail = async (e: any) => {
+    e.preventDefault();
+    let response = await emailjs.sendForm('service_3xpg59y', 'template_jfz9q3l', form?.current, '0KnZnj_U_M7WMPXjg');
+    console.log(response);
+    onClose();
+  };
 
     return (
         <div className="contactForm">
             <h3>CONTACT ME</h3>
-            <div className="contactForm_group">
-                <label>Your Name</label>
-                <input type="text" name="name" value={contactData.name} onInput={handleInput} />
-            </div>
-            <div className="contactForm_group">
-                <label>Your Emain / Your Phone Number</label>
-                <input type="text" name="contact" value={contactData.contact} onInput={handleInput} />
-            </div>
-            <div className="contactForm_group">
-                <label>Your Message</label>
-                <textarea name="message" value={contactData.message} onInput={handleInput}></textarea>
-            </div>
-            <Button btnTxt="SEND" onClick={() => handleSubmit(contactData)} />
+            <form ref={form} onSubmit={sendEmail}>
+                <div className="contactForm_group">
+                    <label>Your Name</label>
+                    <input type="text" name="name" />
+                </div>
+                <div className="contactForm_group">
+                    <label>Your Emain / Your Phone Number</label>
+                    <input type="text" name="contact" />
+                </div>
+                <div className="contactForm_group">
+                    <label>Your Message</label>
+                    <textarea name="message"></textarea>
+                </div>
+                <input type="submit" value="Send" className="btn cursor-pointer transition" />
+            </form>
         </div>
     );
 }
