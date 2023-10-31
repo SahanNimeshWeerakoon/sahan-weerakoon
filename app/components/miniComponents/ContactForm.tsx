@@ -1,6 +1,7 @@
 import { useState } from "react";
+import Button from "./Button";
 
-const ContactForm = () => {
+const ContactForm = ({ handleSubmit }: { handleSubmit: (newType: any) => void }) => {
     const [ contactData, setContactData ] = useState({ name: "", contact: "", message: "" });
 
     const handleInput = (e: any) => {
@@ -15,18 +16,19 @@ const ContactForm = () => {
     return (
         <div className="contactForm">
             <h3>CONTACT ME</h3>
-            <div>
+            <div className="contactForm_group">
                 <label>Your Name</label>
-                <input type="text" name="name" value={contactData.name} />
+                <input type="text" name="name" value={contactData.name} onInput={handleInput} />
             </div>
-            <div>
-                <label>Your Name</label>
-                <input type="text" name="contact" value={contactData.contact} />
+            <div className="contactForm_group">
+                <label>Your Emain / Your Phone Number</label>
+                <input type="text" name="contact" value={contactData.contact} onInput={handleInput} />
             </div>
-            <div>
-                <label>Your Name</label>
-                <textarea name="message" value={contactData.message}></textarea>
+            <div className="contactForm_group">
+                <label>Your Message</label>
+                <textarea name="message" value={contactData.message} onInput={handleInput}></textarea>
             </div>
+            <Button btnTxt="SEND" onClick={() => handleSubmit(contactData)} />
         </div>
     );
 }

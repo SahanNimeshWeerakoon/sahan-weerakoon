@@ -19,14 +19,19 @@ export default function Home() {
     setIsContactFormOpen(status => !status);
   }
 
+  const sendMessage = (msgData: any) => {
+    console.log(msgData);
+    toggleContactModal();
+  }
+
   return (
     <main>
       <NavBar toggleContactModal={toggleContactModal} />
       <Banner />
       <SocialMediaList list={socialMediaList} />
       <Projects />
-      <Modal isOpen={isContactFormOpen}>
-        <ContactForm />
+      <Modal isOpen={isContactFormOpen} onClose={toggleContactModal}>
+        <ContactForm handleSubmit={sendMessage} />
       </Modal>
     </main>
   )
