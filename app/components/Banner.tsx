@@ -3,14 +3,19 @@ import Title from "./miniComponents/Title";
 
 const Banner = () => {
     const movingIconsList = [
-        { source: "/img/movingIcons/nodejs.png", iconName: "Node JS", width: 30, height: 30, x: 10, y: 10 },
-        { source: "/img/movingIcons/react.png", iconName: "React JS", width: 20, height: 20, x: 10, y: 10 },
-        { source: "/img/movingIcons/nodejs.png", iconName: "Node JS", width: 10, height: 10, x: 10, y: 10 },
-        { source: "/img/movingIcons/react.png", iconName: "React JS", width: 10, height: 10, x: 10, y: 10 },
-        { source: "/img/movingIcons/nodejs.png", iconName: "Node JS", width: 10, height: 10, x: 10, y: 10 },
-        { source: "/img/movingIcons/react.png", iconName: "React JS", width: 10, height: 10, x: 10, y: 10 },
-        { source: "/img/movingIcons/nodejs.png", iconName: "Node JS", width: 10, height: 10, x: 10, y: 10 },
-        { source: "/img/movingIcons/react.png", iconName: "React JS", width: 10, height: 10, x: 10, y: 10 },
+        { source: "/img/movingIcons/nodejs.png", iconName: "Node JS", width: 30, height: 30, x: 10, y: 10, mainIcon: false },
+        { source: "/img/movingIcons/vue.png", iconName: "Node JS", width: 30, height: 30, x: 70, y: 10, mainIcon: false },
+
+        { source: "/img/movingIcons/angular.png", iconName: "Node JS", width: 30, height: 30, x: 20, y: 30, mainIcon: false },
+        { source: "/img/movingIcons/react.png", iconName: "Node JS", width: 55, height: 55, x: 50, y: 35, mainIcon: true },
+        { source: "/img/movingIcons/php.png", iconName: "Node JS", width: 30, height: 30, x: 80, y: 30, mainIcon: false },
+
+        { source: "/img/movingIcons/angular.png", iconName: "Node JS", width: 30, height: 30, x: 15, y: 60, mainIcon: false },
+        { source: "/img/movingIcons/nodejs.png", iconName: "Node JS", width: 30, height: 30, x: 78, y: 60, mainIcon: false },
+        
+        { source: "/img/movingIcons/php.png", iconName: "Node JS", width: 30, height: 30, x: 5, y: 90, mainIcon: false },
+        { source: "/img/movingIcons/js.png", iconName: "Node JS", width: 30, height: 30, x: 40, y: 100, mainIcon: false },
+        { source: "/img/movingIcons/figma.png", iconName: "Node JS", width: 30, height: 30, x: 75, y: 90, mainIcon: false },
     ];
     return (
         <div className="banner">
@@ -24,7 +29,11 @@ const Banner = () => {
             </p>
             {movingIconsList.map(icon => {
                 return (
-                    <MovingIcon source={icon.source} iconName={icon.iconName} width={icon.width} height={icon.height} left={icon.x}  top={icon.y} />
+                    <MovingIcon
+                        key={`${icon.x}${icon.y}`} source={icon.source}
+                        iconName={icon.iconName} width={icon.width}
+                        height={icon.height} left={icon.x}
+                        top={icon.y} mainIcon={icon.mainIcon} />
                 )
             })}
         </div>

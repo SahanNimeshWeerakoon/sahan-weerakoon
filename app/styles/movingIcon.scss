@@ -1,5 +1,7 @@
 .movingIcon {
-    animation-name: moveIcon;
     animation-duration: 10s;
     animation-iteration-count: infinite;
+    &.main {
+        animation-duration: 2s;
+    }
 }

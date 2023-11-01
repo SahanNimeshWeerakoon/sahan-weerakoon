@@ -9,3 +9,9 @@
     80% {transform: translateY(random(10)+px);}
     100% {transform: translateX(0); transform: translateY(0);}
 }
+
+@keyframes breathIcon {
+    0% { transform: scale(1);}
+    50% { transform: scale(1.1);}
+    100% { transform: scale(1);}
+}
