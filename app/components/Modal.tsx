@@ -3,7 +3,7 @@ const Modal = ({ isOpen, children, onClose } : {isOpen: boolean, children: strin
         return (
             <div className="modal">
                 <div className="modal_content">
-                    <img src="/img/close.png" alt="close contact me modal" title="close contact me modal" onClick={onClose} />
+                    <img src="/img/close.png" alt="close contact me modal" title="close contact me modal" onClick={() => onClose("toggleModal")} />
                     {children}
                 </div>
             </div>

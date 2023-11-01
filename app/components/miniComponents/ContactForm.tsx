@@ -8,8 +8,7 @@ const ContactForm = ({ onClose } : { onClose: any }) => {
   const sendEmail = async (e: any) => {
     e.preventDefault();
     let response = await emailjs.sendForm('service_3xpg59y', 'template_jfz9q3l', form?.current, '0KnZnj_U_M7WMPXjg');
-    console.log(response);
-    onClose();
+    onClose(response.status ? "sent" : "notSent");
   };
 
     return (

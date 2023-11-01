@@ -57,3 +57,14 @@
         margin-bottom: 3.125rem;
     }
 }
+
+.alert {
+    padding: 3rem;
+    text-align: center;
+    &.successful {
+        color: $font-color;
+    }
+    &.failed {
+        color: $danger-color;
+    }
+}
