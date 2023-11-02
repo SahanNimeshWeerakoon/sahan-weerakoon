@@ -2,11 +2,13 @@
     width: 100%;
     padding: 0.625rem 1rem;
     background: rgba(217, 217, 217, 0.14);
-    @include flex(space-between, center, row, wrap, flex !important);
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -ms-box-sizing: border-box;
+    &_container {
+        @include flex(space-between, center, row, wrap, flex !important);
+    }
     &_logo {
         img {
             width: 4.688rem;
@@ -14,9 +16,19 @@
         }
     }
     &_links {
+        img {
+            display: none;
+            margin: auto 0 auto auto;
+            @media screen and (max-width: 600px) {
+                display: block;
+            }
+        }
         ul {
             @include flex(space-around, center, row, wrap, flex !important);
             list-style-type: none;
+            @media screen and (max-width: 600px) {
+                display: none !important;
+            }
         }
         a {
             color: $font-color;
@@ -27,6 +39,27 @@
             a {
                 padding-right: 20px;
             }
+        }
+    }
+    &_mobile {
+        display: none;
+        text-align: right;
+        list-style-type: none;
+        transition: height 1s;
+        height: 0;
+        overflow: hidden;
+        margin: 0;
+        &.active {
+            height: auto;
+            li {
+                padding: 0.625rem;
+                &:first-child {
+                    margin-top: 0.625rem;
+                }
+            }
+        }
+        @media screen and (max-width: 600px) {
+            display: block;
         }
     }
 }

@@ -6,6 +6,9 @@
     color: $font-color;
     &_header {
         @include flex(space-between, center);
+        img {
+            width: 1.8rem;
+        }
     }
     &_body, &_footer {
         overflow: hidden;
