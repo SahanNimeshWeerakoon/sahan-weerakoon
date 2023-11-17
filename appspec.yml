@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 hooks:
-  BeforeInstall:
-    - location: /home/ubuntu/deploy.sh
+  AfterInstall:
+    - location: /home/ubuntu/sahan-weerakoon/deploy.sh
       timeout: 300
       runas: ubuntu
