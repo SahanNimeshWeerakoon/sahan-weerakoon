@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 hooks:
-  AfterInstall:
+  BeforeInstall:
     - location: deploy.sh
       timeout: 300
       runas: ubuntu
