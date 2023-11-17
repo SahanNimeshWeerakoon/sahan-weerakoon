@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/ec2-user/sahan-weerakoon 
+cd /home/ubuntu/sahan-weerakoon 
 git pull origin main
 npm install &&
 npm run build &&
