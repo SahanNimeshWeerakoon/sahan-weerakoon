@@ -24,21 +24,11 @@ const MovingIcon = ({ source, iconName, width, height, left, top, mainIcon } : {
             height={height}
             style={{
                 position: 'absolute', zIndex: '-1',
+                left: `${left}%`,
+                top: `${top}%`,
                 ...springs
             }}
         />
-        // <img
-        //     className={`movingIcon ${mainIcon ? 'main' : ''}`}
-        //     src={source}
-        //     alt={iconName}
-        //     title={iconName}
-        //     width={width}
-        //     height={height}
-        //     style={{
-        //         position: 'absolute', zIndex: '-1',
-        //         left: `${left}%`, top: `${top}%`,
-        //         animationName: `${mainIcon ? 'breathIcon' : 'moveIcon'}`
-        //     }} />
     );
 }
 
