@@ -24,7 +24,7 @@ const Banner = () => {
                 <Title title="HEY I’M SAHAN WEERAKOON" />
             </h1>
             <p className="banner_desc">
-                A Frontend Main Full-Stack Engineer With More Than Five Years of experience. Let Me
+                A Frontend Main Full-Stack Engineer With More Than Seven Years of experience. Let Me
                 Know What’s On Your Mind & The Time You Need It. I’ll Handle The Rest. Please Make It Challenging.
             </p>
             {movingIconsList.map(icon => {
