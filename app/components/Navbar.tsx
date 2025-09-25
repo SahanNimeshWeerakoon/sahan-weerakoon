@@ -1,26 +1,34 @@
-import { useState } from 'react'
 import Button from "./miniComponents/Button";
+import { Exo_2 } from 'next/font/google'
+import Image from 'next/image'
+
+const exo = Exo_2({
+    subsets: ['latin']
+});
 
 const NavBar = () => {
-    const [isMobileNavActive, setIsMobileNavActive] = useState(false);
     return (
         <nav className="navbar">
             <div className="navbar_container">
                 <div className="navbar_logo">
-                    <img src="/img/logo.png" alt="Sahan Weerakoon Logo" title="Sahan Weerakoon Logo" />
+                    <Image
+                        src="/img/logo.png?v=1"
+                        width={500}
+                        height={500}
+                        alt="Sahan Weerakoon Logo"
+                        className="w-30"
+                    />
+                    {/* <img src="/img/logo.png" alt="Sahan Weerakoon Logo" title="Sahan Weerakoon Logo" /> */}
                 </div>
                 <div className="navbar_links">
-                    <img src="/img/Hamberger.png" alt="Nav menu icon" title="Nav menu icon" onClick={() => {setIsMobileNavActive(state => !state)}} />
-                    <ul>
-                        <li><a href="#about">ABOUT ME</a></li>
-                        <li><Button btnTxt="PROJECTS" url="#projects" /></li>
-                    </ul>
+                    <a href="#about" className={exo.className}>ABOUT&nbsp;&nbsp;ME</a>
+                    <a href="#projects" className={exo.className}>PROJECTS</a>
                 </div>
             </div>
-            <ul className={`navbar_mobile ${isMobileNavActive ? 'active' : ''}`}>
+            {/* <ul className={`navbar_mobile ${isMobileNavActive ? 'active' : ''}`}>
                 <li><a href="#about">ABOUT ME</a></li>
                 <li><Button btnTxt="PROJECTS" url="#projects" /></li>
-            </ul>
+            </ul> */}
         </nav>
     );
 }

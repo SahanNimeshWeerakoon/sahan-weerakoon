@@ -1,11 +1,7 @@
-const Button = ({ btnTxt, btnClasses, url, onClick }: { btnTxt: string, onClick?:any, btnClasses?: string, url?: string }) => {
+const Button = ({ btnTxt, btnClasses, onClick }: { btnTxt: string, onClick: () => {}, btnClasses?: string  }) => {
     return (
         <button className={`btn cursor-pointer transition ${btnClasses}`} onClick={onClick}>
-            { url ? (
-                <a href={url} title="link to the project" target="_blank">{btnTxt}</a>
-            ) : (
-                btnTxt
-            )}
+            {btnTxt}
         </button>
     );
 }

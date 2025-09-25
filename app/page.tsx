@@ -2,6 +2,7 @@
 import { useState } from "react";
 import NavBar from "./components/Navbar";
 import SocialMediaList from "./components/SocialMediaList";
+import HeadBanner from "./components/HeadBanner";
 
 export default function Home() {
   const [ socialMediaList ] = useState([
@@ -14,6 +15,7 @@ export default function Home() {
     <main>
       <NavBar />
       <SocialMediaList list={socialMediaList} />
+      <HeadBanner />
     </main>
   )
 }
