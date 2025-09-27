@@ -1,0 +1,46 @@
+.projects {
+    margin-top: 100px;
+    h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+    .projects-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        .project {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 50%;
+            margin-bottom: 30px;
+            .thumbnail {
+                width: 30%;
+                padding: 0 30px;
+                img {
+                    width: 80%;
+                    height: auto;
+                    border-radius: 20px;
+                }
+            }
+            .details {
+                width: 70%;
+                p {
+                    color: $hover-color;
+                }
+                .skills {
+                    display: flex;
+                    justify-content: flex-start;
+                    gap: 20px;
+                    align-items: center;
+                    .skill {
+                        padding: 10px;
+                        border: 1px solid $font-color;
+                        border-radius: 100px;
+                    }
+                }
+            }
+        }
+    }
+}
