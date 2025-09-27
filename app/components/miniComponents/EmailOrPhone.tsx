@@ -1,17 +1,18 @@
 import { FC } from 'react';
 
+
 interface EmailOrPhoneProps {
-    value: string;
-  type: 'email' | 'call';
-  children?: React.ReactNode;
+  icon: React.ReactNode;
+  text: string;
+  href: string;
 }
 
-const EmailOrPhone: FC<EmailOrPhoneProps> = ({ type, value, children }) => {
-  const href = type === 'email' ? `mailto:${value}` : `tel:${value}`;
+const EmailOrPhone: FC<EmailOrPhoneProps> = ({ icon, text, href }) => {
 
   return (
-    <a href={href}>
-      {children}
+    <a className="expand-button" href={href}>
+      <span className="label">{text}</span>
+      <span className="icon">{icon}</span>
     </a>
   );
 };

@@ -3,6 +3,8 @@ import { useState } from "react";
 import NavBar from "./components/Navbar";
 import SocialMediaList from "./components/SocialMediaList";
 import HeadBanner from "./components/HeadBanner";
+import EmailOrPhone from "./components/miniComponents/EmailOrPhone";
+import Image from "next/image";
 
 export default function Home() {
   const [ socialMediaList ] = useState([
@@ -16,6 +18,10 @@ export default function Home() {
       <NavBar />
       <SocialMediaList list={socialMediaList} />
       <HeadBanner />
+      <div className="contact-icon">
+        <EmailOrPhone icon={<Image src="/img/mail.svg" width={10} height={10} alt="mail" />} text="sahanthedev@gmail.com" href="mailto:sahanthedev@gmail.com"  />
+        <EmailOrPhone icon={<Image src="/img/Call.svg" width={10} height={10} alt="phone" />} text="+94 76 24 61 573" href="tel:+94762461573"  />
+      </div>
     </main>
   )
 }
