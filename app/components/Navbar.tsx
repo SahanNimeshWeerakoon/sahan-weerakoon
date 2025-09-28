@@ -1,4 +1,4 @@
-import Button from "./miniComponents/Button";
+import { FC } from 'react';
 import { Exo_2 } from 'next/font/google'
 import Image from 'next/image'
 
@@ -6,7 +6,11 @@ const exo = Exo_2({
     subsets: ['latin']
 });
 
-const NavBar = () => {
+interface Props {
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const NavBar: FC<Props> = ({ setIsOpen }) => {
     return (
         <nav className="navbar">
             <div className="navbar_container">
@@ -21,7 +25,7 @@ const NavBar = () => {
                     {/* <img src="/img/logo.png" alt="Sahan Weerakoon Logo" title="Sahan Weerakoon Logo" /> */}
                 </div>
                 <div className="navbar_links">
-                    <a href="#about" className={exo.className}>ABOUT&nbsp;&nbsp;ME</a>
+                    <a href="#" onClick={() => {setIsOpen((prev: boolean) => !prev)}} className={exo.className}>ABOUT&nbsp;&nbsp;ME</a>
                     <a href="#projects" className={exo.className}>PROJECTS</a>
                 </div>
             </div>

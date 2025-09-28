@@ -1,9 +1,8 @@
 .headBanner {
   text-align: center;
   position: relative;
-  margin-top: 100px;
-  padding: 80px 0;
-
+  padding: 80px 0 0 0;
+  height: 80vh;
   h1 {
     color: $hover-color;
     font-weight: 900;
@@ -18,7 +17,6 @@
   &_title {
     font-size: 6rem;
     z-index: 0;
-    top: -20px;
   }
 
   &_portrait {
@@ -31,6 +29,6 @@
   &_name {
     font-size: 9rem;
     z-index: 2;
-    bottom: -20px;
+    margin-top: -30px;
   }
 }

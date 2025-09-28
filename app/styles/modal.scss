@@ -1,0 +1,46 @@
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;       /* ignore clicks when hidden */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+    &.visible {
+        pointer-events: auto;
+        opacity: 1;
+    }
+    .modal-content {
+        background: $background-color;
+        border-radius: 8px;
+        padding: 3rem;
+        // max-width: 500px;
+        width: 60%;
+        transform: translateY(100px);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        position: relative;
+        &.slide-up {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        &.slide-down {
+            transform: translateY(100px);
+            opacity: 0;
+        }
+        p, li {
+            font-size: 1.3rem;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
