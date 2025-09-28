@@ -1,4 +1,6 @@
-import { FC, ReactNode } from "react";
+'use client';
+
+import { FC, ReactNode, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import Image from "next/image";
 
@@ -9,7 +11,12 @@ interface Props {
 }
 
 const Modal: FC<Props> = ({ isOpen, children, setIsOpen }) => {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   const closeModal = () => setIsOpen(false);
+
+  if (!mounted) return null;
 
   return ReactDOM.createPortal(
     <div
@@ -18,9 +25,16 @@ const Modal: FC<Props> = ({ isOpen, children, setIsOpen }) => {
     >
       <div
         className={`modal-content ${isOpen ? "slide-up" : "slide-down"}`}
-        onClick={e => e.stopPropagation()} // don’t close when clicking inside
+        onClick={e => e.stopPropagation()}
       >
-        <Image onClick={closeModal} src="/img/close.svg" alt="close icon" className="close" width={30} height={30} />
+        <Image
+          onClick={closeModal}
+          src="/img/close.svg"
+          alt="close icon"
+          className="close"
+          width={30}
+          height={30}
+        />
         {children}
       </div>
     </div>,
