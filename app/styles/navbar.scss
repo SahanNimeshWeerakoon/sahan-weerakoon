@@ -9,6 +9,9 @@
     &_container {
         text-align: center;
         position: relative;
+        @media screen and (max-width: $mobile-max-width) {
+            text-align: right;
+        }
     }
     &_logo {
         position: absolute;
@@ -29,27 +32,10 @@
             &:hover {
                 color: $hover-color;
             }
-        }
-    }
-    &_mobile {
-        display: none;
-        text-align: right;
-        list-style-type: none;
-        transition: height 1s;
-        height: 0;
-        overflow: hidden;
-        margin: 0;
-        &.active {
-            height: auto;
-            li {
-                padding: 0.625rem;
-                &:first-child {
-                    margin-top: 0.625rem;
-                }
+            @media screen and (max-width: $mobile-max-width) {
+                font-size: 1rem;
+                padding: 5px 10px;
             }
-        }
-        @media screen and (max-width: 600px) {
-            display: block;
         }
     }
 }

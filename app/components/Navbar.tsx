@@ -29,10 +29,6 @@ const NavBar: FC<Props> = ({ setIsOpen }) => {
                     <a href="#projects" className={exo.className}>PROJECTS</a>
                 </div>
             </div>
-            {/* <ul className={`navbar_mobile ${isMobileNavActive ? 'active' : ''}`}>
-                <li><a href="#about">ABOUT ME</a></li>
-                <li><Button btnTxt="PROJECTS" url="#projects" /></li>
-            </ul> */}
         </nav>
     );
 }
