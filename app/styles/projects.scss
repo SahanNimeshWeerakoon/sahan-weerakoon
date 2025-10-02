@@ -10,7 +10,7 @@
     .projects-list {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         flex-wrap: wrap;
         .project {
             display: flex;
@@ -36,6 +36,9 @@
             }
             .details {
                 width: 70%;
+                h2 {
+                    margin: 0;
+                }
                 p {
                     color: $hover-color;
                 }
@@ -44,6 +47,7 @@
                     justify-content: flex-start;
                     gap: 1.25rem;
                     align-items: center;
+                    flex-wrap: wrap;
                     .skill {
                         padding: 0.625rem;
                         border: 0.063rem solid $font-color;
