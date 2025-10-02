@@ -3,9 +3,9 @@
   position: relative;
   padding: 5rem 0 0 0;
   height: 80vh;
-  // @media screen and (max-width: $mobile-max-width) {
-  //   padding: 30px 0 0 0;
-  // }
+  @media screen and (max-width: $mobile-max-width) {
+    height: auto;
+  }
   h1 {
     color: $hover-color;
     font-weight: 900;
