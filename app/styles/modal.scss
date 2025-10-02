@@ -15,11 +15,11 @@
     }
     .modal-content {
         background: $background-color;
-        border-radius: 8px;
+        border-radius: 0.5rem;
         padding: 3rem;
         // max-width: 500px;
         width: 60%;
-        transform: translateY(100px);
+        transform: translateY(6.25rem);
         opacity: 0;
         transition: transform 0.3s ease, opacity 0.3s ease;
         position: relative;
@@ -28,7 +28,7 @@
             opacity: 1;
         }
         &.slide-down {
-            transform: translateY(100px);
+            transform: translateY(6.25rem);
             opacity: 0;
         }
         p, li {
@@ -36,8 +36,8 @@
         }
         .close {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 0.625rem;
+            right: 0.625rem;
             &:hover {
                 cursor: pointer;
             }
