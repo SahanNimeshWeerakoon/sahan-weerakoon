@@ -1,0 +1,26 @@
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-50%); /* idle */
+  }
+
+  /* bounce happens early in the timeline */
+  2% {
+    transform: translateY(calc(-50% - 25px));
+  }
+  4% {
+    transform: translateY(-50%);
+  }
+  6% {
+    transform: translateY(calc(-50% - 15px));
+  }
+  8% {
+    transform: translateY(-50%);
+  }
+  10% {
+    transform: translateY(calc(-50% - 10px));
+  }
+  12% {
+    transform: translateY(-50%);
+  }
+}

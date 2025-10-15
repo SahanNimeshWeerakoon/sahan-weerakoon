@@ -26,6 +26,8 @@
         &.slide-up {
             transform: translateY(0);
             opacity: 1;
+            max-height: 90vh;
+            overflow: scroll;
         }
         &.slide-down {
             transform: translateY(6.25rem);

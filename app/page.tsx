@@ -8,6 +8,7 @@ import Image from "next/image";
 import Projects from "./components/Projects";
 import Modal from "./components/Modal";
 import { Exo_2 } from 'next/font/google'
+import DownloadResume from "./components/DownloadResume";
 
 const exo = Exo_2({
     subsets: ['latin']
@@ -31,6 +32,7 @@ export default function Home() {
         <EmailOrPhone icon={<Image src="/img/Call.svg" width={10} height={10} alt="phone" />} text="+94 76 24 61 573" href="tel:+94762461573"  />
       </div>
       <Projects />
+      <DownloadResume />
       <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
         <div className={exo.className}>
           <p>I’m a self-taught software engineer who took the long road by choice. After finishing my O/Ls I skipped the degree track, grabbed every free resource I could find online, and never stopped building.</p>

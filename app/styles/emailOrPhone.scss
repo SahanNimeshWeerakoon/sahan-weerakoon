@@ -56,3 +56,16 @@
         height: 1rem;
     }
 }
+
+.resume {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  background: #000000;
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+  
+    animation: bounce 10.5s ease-in-out infinite;
+}
