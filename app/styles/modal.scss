@@ -26,8 +26,12 @@
         &.slide-up {
             transform: translateY(0);
             opacity: 1;
-            max-height: 90vh;
-            overflow: scroll;
+            max-height: 80vh;
+            margin-top: 10vh;
+            margin-bottom: 10vh;
+            @media screen and (max-width: $mobile-max-width) {
+                overflow-y: scroll;
+            }
         }
         &.slide-down {
             transform: translateY(6.25rem);
